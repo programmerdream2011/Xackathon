@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>   Smart Admission AI   </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <p> Evaluate candidates automatically using AI </p>
+        <div id="box">
+            <p>Motivation:</p>
+            <textarea id="motivation" placeholder="Why do you want to study with us ?"></textarea>
+            <p>Experience:</p>
+            <textarea id="experience" placeholder="Describe your experience. (e.g.,projects you've worked on)"></textarea>
+            <p>Skills:</p>
+            <textarea id="skill" placeholder="List your main skills. (e.g., coding, leadership)"></textarea>
+            <button onclick="analyze()">Analyze</button>
+            <div id="boxx">
+            <p id="result"></p>
+            </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>

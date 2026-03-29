@@ -1,0 +1,59 @@
+body{
+    background: hwb(240 20% 20%);
+}
+h2{
+    color:white;
+    font-size: 12px;
+    margin: 20px;
+}
+title{
+    font-size: 32px;
+    color: white;
+    margin-top:50px;
+}
+p{
+    color: black;
+    font-size: 22px ;
+}
+.feature{
+    font-size: 20 px;
+    color: rgb(166, 164, 164);
+}
+button{
+    color : white;
+    background: rgb(53, 53, 249);
+    max-width: 60 px;
+    max-height: 30 px;
+    padding: 5 px;
+    font-size: 20 px;;
+}
+#box{
+    background: white;
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+textarea{
+    width: 100%;
+    height: 60px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+button{
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#boxx{
+    margin-top: 20px;
+    background: #f2f2f2;
+    padding: 15px;
+    border-radius: 15px;
+}
