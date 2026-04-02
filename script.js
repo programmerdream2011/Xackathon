@@ -9,18 +9,20 @@ function analyze(){
 
     let score = 0;
 
-    if(totalText.length > 150){
+    if(totalText.length > 200){
         score += 30;
-    } else if(totalText.length > 80){
+    } else if(totalText.length > 150){
         score += 20;
-    } else {
-        score += 10;
+    } else if(totalText.length > 100){
+        score += 10;}
+    else {
+        score += 0;
     }
 
-    let keywords = ["leadership", "project", "AI", "teamwork"];
+    let keywords = ["leadership", "project", "AI", "teamwork","volunteering","music","art","sport","science project","robotics"];
     keywords.forEach(word => {
         if(totalText.toLowerCase().includes(word)){
-            score += 10;
+            score += 5;
         }
     });
 
@@ -28,15 +30,15 @@ function analyze(){
     if(motivation.includes(".") || experience.includes(".")){
         score += 30;
     } else {
-        score += 10;
+        score += 20;
     }
 
 
     let decision = "";
 
-    if(score >= 75){
+    if(score >= 81){
         decision = "ACCEPT ✅";
-    } else if(score >= 65){
+    } else if(score >= 67){
         decision = "MAYBE ⚠️";
     } else {
         decision = "REJECT ❌";
@@ -44,10 +46,10 @@ function analyze(){
 
     let feedback = "";
 
-    if(motivation.length > 50){
+    if(motivation.length > 200){
         feedback += "Good motivation. ";
     } else {
-        feedback += "Motivation is too short. ";
+        feedback += "You need better motivation. ";
     }
 
     if(!experience.toLowerCase().includes("project")){
@@ -55,7 +57,7 @@ function analyze(){
     }
 
     if(!skills.toLowerCase().includes("teamwork")){
-        feedback += "Mention teamwork skills. ";
+        feedback += "Work more and do projects in teams";
     }
 
     let data = {
@@ -73,7 +75,7 @@ function analyze(){
     // OUTPUT
 
     document.getElementById("result").innerText =
-        "Score: " + score +
-        "Decision: " + decision +
+        "Score: " + score + " " +
+        "Decision: " + decision + " " +
         "Feedback: " + feedback;
 }
